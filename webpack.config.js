@@ -9,6 +9,9 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
   },
   mode,
+  node: {
+    fs: "empty"
+ },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     plugins: [],

@@ -1,4 +1,8 @@
+import "reflect-metadata";
+import { DIContainer } from '../inversify.config';
 import { Router } from "cloudflare-router";
+import OrderHandler from "./handlers/order/order-handler";
+
 const router = new Router();
 const apiRouter = new Router();
 
@@ -6,13 +10,12 @@ const apiRouter = new Router();
 router.use("/api", apiRouter);
 
 // Setting up paths
-router.get("/", (req, res) => res.text("Hello, world!"));
-apiRouter.get("/", (req, res) => res.text("Welcome to the API!"));
-apiRouter.get("/welcome/:name", (req, res) => {    
-  if (req !== undefined && req.params !== undefined) {
-    return res.text(`Welcome, kevin`);
-  }
-});
+router.get("/", new OrderHandler().handle);
+// apiRouter.get("/welcome/:name", (req, res) => {    
+//   if (req !== undefined && req.params !== undefined) {
+//     return res.text(`Welcome, kevin`);
+//   }
+// });
 
 addEventListener("fetch", event => {    
     event.respondWith(
