@@ -1,0 +1,13 @@
+name = "kevin-typescript-example-wrangler"
+type = "webpack"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+webpack_config = "webpack.config.js"
+
+[env.dev]
+
+[env.staging]
+
+[env.production]
