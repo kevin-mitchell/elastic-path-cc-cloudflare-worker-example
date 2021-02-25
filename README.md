@@ -1,4 +1,4 @@
-# Kevin's TypeScript Elastic Path Commerce Clouder Cloudflare Worker Example
+# Kevin Mitchell's TypeScript Elastic Path Commerce Clouder Cloudflare Worker Example
 
 **This is an _example_, perhaps a starting place.**
 
