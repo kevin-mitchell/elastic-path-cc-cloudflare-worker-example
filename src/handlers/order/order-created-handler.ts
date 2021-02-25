@@ -1,5 +1,5 @@
 import { Moltin, Order } from "@moltin/sdk";
-import { DIContainer } from '../../../inversify.config';
+import { DIContainer } from '../../inversify.config';
 import RouterRequest from "cloudflare-router/dist/RouterRequest";
 import RouterResponse from "cloudflare-router/dist/RouterResponse";
 import { TYPES } from "../../di/types";

@@ -1,6 +1,6 @@
 import { Moltin, gateway, MemoryStorageFactory } from '@moltin/sdk';
 import { Container } from "inversify";
-import { TYPES } from "./src/di/types";
+import { TYPES } from "./di/types";
 
 const DIContainer = new Container();
 DIContainer.bind<Moltin>(TYPES.Moltin).toConstantValue(gateway({
@@ -9,5 +9,6 @@ DIContainer.bind<Moltin>(TYPES.Moltin).toConstantValue(gateway({
     host: 'useast.api.elasticpath.com',   
     storage: new MemoryStorageFactory()
 }));
+
 
 export { DIContainer };
